@@ -1,0 +1,8 @@
+version: '3.4'
+
+services:
+  kmart.codingtest.consoleapp:
+    image: ${DOCKER_REGISTRY-}kmartcodingtestconsoleapp
+    build:
+      context: .
+      dockerfile: Kmart.CodingTest.ConsoleApp/Dockerfile
