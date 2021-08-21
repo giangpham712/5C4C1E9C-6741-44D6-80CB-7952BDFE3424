@@ -18,7 +18,7 @@ jobs:
         with:
           dotnet-version: ${{ matrix.dotnet-version }}
       - name: Install dependencies
-        run: dotnet restore
+        run: dotnet restore Kmart.CodingTest.sln
       - name: Build
         run: dotnet build Kmart.CodingTest.sln --configuration Release --no-restore
       - name: Run unit tests
