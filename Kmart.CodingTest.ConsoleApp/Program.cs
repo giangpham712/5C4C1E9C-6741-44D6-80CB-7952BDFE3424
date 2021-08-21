@@ -8,6 +8,7 @@ namespace Kmart.CodingTest.ConsoleApp
         static void Main(string[] args)
         {
             var longestIncreasingSubsequence = FindLongestIncreasingSubsequence(string.Join(' ', args));
+            Console.WriteLine(longestIncreasingSubsequence);
         }
 
         public static string FindLongestIncreasingSubsequence(string input)

@@ -1,0 +1,10 @@
+{
+  "profiles": {
+    "Kmart.CodingTest.ConsoleApp.Tests": {
+      "commandName": "Project"
+    },
+    "Docker": {
+      "commandName": "Docker"
+    }
+  }
+}
