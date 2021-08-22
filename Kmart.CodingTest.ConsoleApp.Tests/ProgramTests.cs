@@ -33,9 +33,11 @@ namespace Kmart.CodingTest.ConsoleApp.Tests
 
         [Theory]
         [InlineData("asa 12asaf 1 2")]
+        [InlineData("12  12 1")]
         public void FindLongestIncreasingSubsequence_InvalidInput_ThrowsArgumentException(string input)
         {
-            Assert.Throws<ArgumentException>(() => Program.FindLongestIncreasingSubsequence(input));
+            var exception = Assert.Throws<ArgumentException>(() => Program.FindLongestIncreasingSubsequence(input));
+            Assert.Equal("Input string is invalid", exception.Message);
         }
     }
 }

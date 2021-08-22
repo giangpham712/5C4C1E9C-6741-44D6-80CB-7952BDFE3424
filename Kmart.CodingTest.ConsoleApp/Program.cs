@@ -18,7 +18,15 @@ namespace Kmart.CodingTest.ConsoleApp
                 return string.Empty;
             }
 
-            var values = input.Split(' ').Select(long.Parse).ToArray();
+            long[] values;
+            try
+            {
+                values = input.Split(' ').Select(long.Parse).ToArray();
+            }
+            catch
+            {
+                throw new ArgumentException("Input string is invalid");
+            }
 
             var longest = 1;
             var longestStartIndex = 0;
