@@ -22,8 +22,9 @@ jobs:
       - name: Lint code
         uses: github/super-linter@v4
         env:
-          VALIDATE_ALL_CODEBASE: true
+          VALIDATE_ALL_CODEBASE: false
           VALIDATE_DOCKERFILE: false
+          VALIDATE_CSHARP: true
           VALIDATE_DOCKERFILE_HADOLINT: true
           DEFAULT_BRANCH: master
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
