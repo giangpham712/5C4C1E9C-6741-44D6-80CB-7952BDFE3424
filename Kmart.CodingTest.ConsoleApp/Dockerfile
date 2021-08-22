@@ -9,6 +9,9 @@ COPY ["Kmart.CodingTest.ConsoleApp/Kmart.CodingTest.ConsoleApp.csproj", "Kmart.C
 RUN dotnet restore "Kmart.CodingTest.ConsoleApp/Kmart.CodingTest.ConsoleApp.csproj"
 COPY . .
 WORKDIR "/src/Kmart.CodingTest.ConsoleApp"
+RUN dotnet tool install -g dotnet-format
+ENV PATH="${PATH}:/root/.dotnet/tools"
+RUN dotnet format --check --verbosity diagnostic
 RUN dotnet build "Kmart.CodingTest.ConsoleApp.csproj" -c Release -o /app/build
 
 FROM build AS publish
