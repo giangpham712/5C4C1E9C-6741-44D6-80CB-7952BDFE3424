@@ -23,6 +23,8 @@ jobs:
         uses: github/super-linter@v4
         env:
           VALIDATE_ALL_CODEBASE: true
+          VALIDATE_DOCKERFILE: false
+          VALIDATE_DOCKERFILE_HADOLINT: true
           DEFAULT_BRANCH: master
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
       - name: Build
